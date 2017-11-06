@@ -1067,23 +1067,67 @@ label[for="btn-3"]:hover {
 
 .catalog-form fieldset {
   margin: 0;
+  margin-bottom: 16px;
   padding: 0;
   border: none;
+}
 
+.catalog-form .fieldset__wrap {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .catalog-form legend {
+  padding-bottom: 6px;
+
   font-size: 14px;
   line-height: 1.142;
   font-weight: 400;
 }
 
 .catalog-form .btn {
+  width: 114px;
+  height: 37px;
+
+  font-size: 16px;
+  line-height: 1.125;
+
+  vertical-align: middle;
   background: none;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: none;
-  border: none;
+  border: 2px solid #ffffff;
+}
+
+.catalog-form .select {
+  margin-right: 14px;
+  width: 194px;
+}
+
+.catalog-form .range {
+  margin-right: 14px;
+  width: 220px;
+}
+
+.catalog-form .radiobuttons {
+  width: 415px;
+}
+
+.radiobuttons input {
+  display: none;
+}
+
+.catalog-form .checkboxes {
+  flex-grow: 1;
+  margin-bottom: 0;
+  margin-right: 13px;
+}
+
+.checkboxes input {
+  display: none;
+}
+
+.catalog-cream-gallery {
+  padding-top: 39px;
 }
 
 .gallery__list {

@@ -68,39 +68,47 @@
           </nav>
           <h1 class="main-title">Сливочное мороженое</h1>
           <form class="catalog-form">
-            <fieldset>
+            <fieldset class="select">
               <legend>Сортировка</legend>
-              <select>
-                <option value="popular">по популярности</option>
-              </select>
+              <div class="fieldset__wrap">
+                <select>
+                  <option value="popular">по популярности</option>
+                </select>
+              </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="range">
               <legend>Цена: 100 руб. &ndash; 500 руб.</legend>
-              <input type="range" multiple min="100" step="50" max="500" data-values="100 500">
+              <div class="fieldset__wrap">
+                <input type="range" multiple min="100" step="50" max="500" data-values="100 500">
+              </div>
             </fieldset>
             <fieldset class="radiobuttons">
               <legend>Жирность</legend>
-              <input type="radio" name="fat-content" value="zero" id="zero">
-              <label for="zero">0%</label>
-              <input type="radio" name="fat-content" value="lower-10%" id="lower-10%" checked>
-              <label for="lower-10%">до 10%</label>
-              <input type="radio" name="fat-content" value="lower-30%" id="lower-30%">
-              <label for="lower-30%">до 30%</label>
-              <input type="radio" name="fat-content" value="more-30%" id="more-30%">
-              <label for="more-30%">выше 30%</label>
+              <div class="fieldset__wrap">
+                <input type="radio" name="fat-content" value="zero" id="zero">
+                <label for="zero">0%</label>
+                <input type="radio" name="fat-content" value="lower-10%" id="lower-10%" checked>
+                <label for="lower-10%">до 10%</label>
+                <input type="radio" name="fat-content" value="lower-30%" id="lower-30%">
+                <label for="lower-30%">до 30%</label>
+                <input type="radio" name="fat-content" value="more-30%" id="more-30%">
+                <label for="more-30%">выше 30%</label>
+              </div>
             </fieldset>
             <fieldset class="checkboxes">
               <legend>Наполнители</legend>
-              <input type="checkbox" name="choco" id="choco" checked>
-              <label for="choco">шоколадные</label>
-              <input type="checkbox" name="sugar" id="sugar" checked>
-              <label for="sugar">сахарные присыпки</label>
-              <input type="checkbox" name="fruits" id="fruits">
-              <label for="fruits">фрукты</label>
-              <input type="checkbox" name="syrup" id="syrup">
-              <label for="syrup">сиропы</label>
-              <input type="checkbox" name="jam" id="jam">
-              <label for="jam">джемы</label>
+              <div class="fieldset__wrap">
+                <input type="checkbox" name="choco" id="choco" checked>
+                <label for="choco">шоколадные</label>
+                <input type="checkbox" name="sugar" id="sugar" checked>
+                <label for="sugar">сахарные присыпки</label>
+                <input type="checkbox" name="fruits" id="fruits">
+                <label for="fruits">фрукты</label>
+                <input type="checkbox" name="syrup" id="syrup">
+                <label for="syrup">сиропы</label>
+                <input type="checkbox" name="jam" id="jam">
+                <label for="jam">джемы</label>
+              </div>
             </fieldset>
             <button class="btn" type="submit">Применить</button>
           </form>
