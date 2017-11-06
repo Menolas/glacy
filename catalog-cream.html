@@ -57,17 +57,17 @@
         </div>
       </header>
 
-      <main>
+      <main class="catalog-main">
         <div class="container">
           <nav class="breadcrumbs">
             <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-              <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
+              <li class="breadcrumbs__item"><a href="index.html">Главная »</a></li>
+              <li class="breadcrumbs__item"><a href="#">Каталог »</a></li>
               <li class="breadcrumbs__item"><a class="active">Сливочное</a></li>
             </ul>
           </nav>
-          <h1>Сливочное мороженое</h1>
-          <form>
+          <h1 class="main-title">Сливочное мороженое</h1>
+          <form class="catalog-form">
             <fieldset>
               <legend>Сортировка</legend>
               <select>
@@ -102,7 +102,7 @@
               <input type="checkbox" name="jam" id="jam">
               <label for="jam">джемы</label>
             </fieldset>
-            <button type="submit">Применить</button>
+            <button class="btn" type="submit">Применить</button>
           </form>
           <section class="catalog-cream-gallery">
             <ul class="gallery__list">
@@ -161,23 +161,25 @@
         <div class="container">
           <section class="social">
             <ul class="social__list">
-              <li class="social__item"><a href="#">Мы в Твиттере</a></li>
-              <li class="social__item"><a href="#">Мы в Инстаграмме</a></li>
-              <li class="social__item"><a href="#">Мы в Фейсбуке</a></li>
-              <li class="social__item"><a href="#">Мы в ВКонтакте</a></li>
+              <li class="social__item  social__item--twitter"><a href="#">Мы в Твиттере</a></li>
+              <li class="social__item  social__item--instagramm"><a href="#">Мы в Инстаграмме</a></li>
+              <li class="social__item  social__item--facebook"><a href="#">Мы в Фейсбуке</a></li>
+              <li class="social__item  social__item--vk"><a href="#">Мы в ВКонтакте</a></li>
             </ul>
           </section>
           <section class="links">
             <ul class="links__list">
-              <li><a href="#">Для поставщиков</a></li>
-              <li><a href="#">О производстве</a></li>
-              <li><a href="#">Наши документы</a></li>
-              <li><a href="#">Экологические стандарты</a></li>
+              <li class="links__item"><a href="#">Для поставщиков</a></li>
+              <li class="links__item"><a href="#">Наши документы</a></li>
+              <li class="links__item"><a href="#">О производстве</a></li>
+              <li class="links__item"><a href="#">Экологические стандарты</a></li>
             </ul>
           </section>
           <div class="copyright">
-            <a href="#"></a>
-            <p>Сделано в HTML Academy © 2017</p>
+            <a href="#">
+              <img src="img/logo-html.png" width="108" height="39" alt="HTML Academy">
+              <p>Сделано в HTML Academy © 2017</p>
+            </a>
           </div>
         </div>
       </footer>

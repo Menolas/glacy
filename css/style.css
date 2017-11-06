@@ -1025,3 +1025,63 @@ label[for="btn-3"]:hover {
 .feedback {
   display: none;
 }
+
+.catalog-main {
+  padding-top: 21px;
+}
+
+.bradcrumbs {
+  margin-bottom: 2px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  margin-right: 8px;
+}
+
+.breadcrumbs__item a {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.142;
+  font-weight: 400;
+}
+
+.main-title {
+  margin: 0;
+  font-size: 35px;
+  line-height: 1.171;
+}
+
+.catalog-form {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.catalog-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-form legend {
+  font-size: 14px;
+  line-height: 1.142;
+  font-weight: 400;
+}
+
+.catalog-form .btn {
+  background: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  border: none;
+}
