@@ -64,6 +64,10 @@ body {
   padding: 0 20px;
 }
 
+.container__gallery {
+  padding: 0 10px;
+}
+
 .page-header {
   position: relative;
 
@@ -563,8 +567,8 @@ label[for="btn-3"]:hover {
 }
 
 .hits {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 31px;
+  padding-bottom: 23px;
 }
 
 .hits__list {
@@ -575,17 +579,47 @@ label[for="btn-3"]:hover {
 }
 
 .hits__item {
+  position: relative;
   margin-right: 20px;
   width: 200px;
 
   text-align: center;
 }
 
-.hits__item:last-child {
+.hits__item:nth-child(4n) {
   margin-right: 0;
 }
 
-.hits__item a {
+.hits__item .btn {
+  display: none;
+  margin-top: 16px;
+}
+
+.icecream-item {
+  padding: 0;
+}
+
+.hits__item:hover .icecream-item {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 20;
+
+  padding: 0 10px;
+  padding-top: 9px;
+  padding-bottom: 17px;
+  width: 200px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.hits__item:hover .btn {
+  display: inline-block;
+}
+
+.hits__item .item__link {
   position: relative;
 
   display: block;
@@ -609,6 +643,8 @@ label[for="btn-3"]:hover {
   font-size: 45px;
   line-height: 1;
   font-weight: 700;
+
+  text-shadow: 1px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .hits__item span {
@@ -616,7 +652,7 @@ label[for="btn-3"]:hover {
   line-height: 1.5;
 }
 
-.hits__item a::before {
+.hits__item .item__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -630,19 +666,19 @@ label[for="btn-3"]:hover {
   background-position: center;
 }
 
-.hits__item--1 a {
+.hits__item--1 .item__link {
   background-image: url("../img/1.png");
 }
 
-.hits__item--2 a {
+.hits__item--2 .item__link {
   background-image: url("../img/2.png");
 }
 
-.hits__item--3 a {
+.hits__item--3 .item__link {
   background-image: url("../img/3.png");
 }
 
-.hits__item--4 a {
+.hits__item--4 .item__link {
   background-image: url("../img/4.png");
 }
 
@@ -1223,59 +1259,63 @@ label[for="btn-3"]:hover {
   flex-wrap: wrap;
 }
 
-.gallery__item:nth-child(4n) {
-  margin-right: 0;
+.gallery__item {   
+  margin-bottom: 39px;
 }
 
-.gallery__item a::before {
+.gallery__item:nth-last-child(-n+4) {
+  margin-bottom: 0;
+}
+
+.gallery__item .item__link::before {
   display: none;
 }
 
-.gallery__item--1 a {
+.gallery__item--1 .item__link {
   background-image: url("../img/1.png");
 }
 
-.gallery__item--2 a {
+.gallery__item--2 .item__link {
   background-image: url("../img/2.png");
 }
 
-.gallery__item--3 a {
+.gallery__item--3 .item__link {
   background-image: url("../img/3.png");
 }
 
-.gallery__item--4 a {
+.gallery__item--4 .item__link {
   background-image: url("../img/4.png");
 }
 
-.gallery__item--5 a {
+.gallery__item--5 .item__link {
   background-image: url("../img/5.png");
 }
 
-.gallery__item--6 a {
+.gallery__item--6 .item__link {
   background-image: url("../img/6.png");
 }
 
-.gallery__item--7 a {
+.gallery__item--7 .item__link {
   background-image: url("../img/7.png");
 }
 
-.gallery__item--8 a {
+.gallery__item--8 .item__link {
   background-image: url("../img/8.png");
 }
 
-.gallery__item--9 a {
+.gallery__item--9 .item__link {
   background-image: url("../img/9.png");
 }
 
-.gallery__item--10 a {
+.gallery__item--10 .item__link {
   background-image: url("../img/10.png");
 }
 
-.gallery__item--11 a{
+.gallery__item--11 .item__link {
   background-image: url("../img/11.png");
 }
 
-.gallery__item--12 a {
+.gallery__item--12 .item__link {
   background-image: url("../img/12.png");
 }
 
