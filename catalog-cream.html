@@ -68,13 +68,19 @@
           </nav>
           <h1 class="main-title">Сливочное мороженое</h1>
           <form class="catalog-form">
-            <fieldset class="select">
+            <fieldset class="select-field">
               <legend>Сортировка</legend>
               <div class="fieldset__wrap">
-                <select>
-                  <option value="popular">по популярности</option>
-                </select>
-              </div>
+                <label for="select" class="select">
+                  <input type="radio" name="list" value="not_changed" id="bg" checked>
+                  <input type="radio" name="list" value="not_changed" id="select">
+                  <label class="bg" for="bg"></label>
+                  <div class="options">
+                    <input type="radio" name="list" value="first_value" id="list[0]" checked>
+                    <label for="list[0]">по популярности</label>
+                  </div>
+                </label>
+              </div>  
             </fieldset>
             <fieldset class="range">
               <legend>Цена: 100 руб. &ndash; 500 руб.</legend>
@@ -239,7 +245,7 @@
                 <a href="#"><span class="visually-hidden">Следующая страница</span></a>
               </li>
             </ul>
-          </div>  
+          </div>
         </div>
       </main>
 

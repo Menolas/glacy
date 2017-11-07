@@ -1108,13 +1108,6 @@ label[for="btn-3"]:hover {
   border: none;
 }
 
-.catalog-form .fieldset__wrap {
-  padding: 0 16px;
-
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
 .catalog-form legend {
   padding-bottom: 6px;
 
@@ -1123,24 +1116,130 @@ label[for="btn-3"]:hover {
   font-weight: 400;
 }
 
-.catalog-form .btn {
-  margin-top: 20px;
-  width: 114px;
-  height: 37px;
+.catalog-form .fieldset__wrap {
+  padding: 0 16px;
+
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-form label {
+  display: inline-block;
 
   font-size: 16px;
   line-height: 1.125;
-
-  vertical-align: middle;
-  background: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: none;
-  border: 2px solid #ffffff;
+  font-weight: 500;
 }
 
-.catalog-form .select {
+.catalog-form .select-field {
   margin-right: 14px;
   width: 194px;
+}
+
+.select-field input {
+  display: none;
+}
+
+.select-field label {
+  padding: 11px 16px;
+  padding-bottom: 9px;
+  width: 194px;
+
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.select-field .fieldset__wrap {
+  padding: 0;
+  height: 39px;
+}
+
+.select-field .select {
+  position: relative;
+
+  display: inline-block;
+  padding: 0;
+  width: 194px;
+  height: 39px;
+}
+
+.select::before {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  z-index: 10;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  border-top: 10px solid #ffffff;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+
+  cursor: pointer;
+}
+
+.select:hover .select::before {
+  border-top: 10px solid #333333;
+}
+/* Стилизация блока с опциями. min-height сделана для фикса высоты при абсолютном позиционировании, overflow же сделан для фиксированной высоты(см. ниже) */
+
+.options {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  min-height: 39px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+#select:not(:checked) ~ .options {
+  height: 39px;
+}
+
+.options label {
+  display: none;
+}
+
+.options label:hover {
+  color: #323232;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.options label:hover .select::before {
+  border-top: 10px solid #333333;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+
+  z-index: 10;
+}
+/* Опять же фикс из-за абсолютного позиционирования */
+#select:checked ~ .options {
+
+}
+/* Если наш селект открыт, то надо сделать все опции видимыми */
+#select:checked ~ .options label {
+  display: block;
+}
+/* Если какая-либо опция была выбрана, то сделать ее видимой(при выборе селект автоматически закроется) */
+.options input:checked + label {
+  display: block!important;
+}
+
+#select:checked ~ .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
 }
 
 .catalog-form .range {
@@ -1154,13 +1253,6 @@ label[for="btn-3"]:hover {
 
 .radiobuttons input {
   display: none;
-}
-
-.catalog-form label {
-  display: inline-block;
-
-  font-size: 16px;
-  line-height: 1.125;
 }
 
 .radiobuttons label {
@@ -1251,6 +1343,21 @@ label[for="btn-3"]:hover {
   background-position: center;
 }
 
+.catalog-form .btn {
+  margin-top: 20px;
+  width: 114px;
+  height: 37px;
+
+  font-size: 16px;
+  line-height: 1.125;
+
+  vertical-align: middle;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  border: 2px solid #ffffff;
+}
+
 .catalog-cream-gallery {
   padding-top: 39px;
 }
@@ -1322,6 +1429,9 @@ label[for="btn-3"]:hover {
 .paginator {
   display: flex;
   padding-top: 80px;
+  padding-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .paginator__list {
