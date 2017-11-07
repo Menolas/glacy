@@ -1259,7 +1259,7 @@ label[for="btn-3"]:hover {
   flex-wrap: wrap;
 }
 
-.gallery__item {   
+.gallery__item {
   margin-bottom: 39px;
 }
 
@@ -1321,14 +1321,79 @@ label[for="btn-3"]:hover {
 
 .paginator {
   display: flex;
+  padding-top: 80px;
+}
+
+.paginator__list {
+  display: flex;
+  align-items: center;
   margin: 0;
+  margin-left: auto;
+  margin-right: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .paginator__page a {
+  position: relative;
+  display: inline-block;
+
+  padding: 4px 10px;
+  width: 27px;
+  height: 26px;
+
   color: #ffffff;
   font-size: 16px;
   line-height: 1.125;
+  font-weight: 500;
   text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+.paginator__page .active {
+  color: #323232;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.paginator__page:first-child a,
+.paginator__page:last-child a {
+  padding: 0;
+  width: 23px;
+  height: 12px;
+}
+
+.paginator__page:first-child a::before,
+.paginator__page:first-child a::after,
+.paginator__page:last-child a::before,
+.paginator__page:last-child a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+
+
+  width: 10px;
+  height: 1px;
+
+  background-color: #ffffff;
+}
+
+.paginator__page:first-child a::before,
+.paginator__page:last-child a::before {
+  transform: rotate(45deg);
+}
+
+.paginator__page:first-child a::after,
+.paginator__page:last-child a::after {
+  transform: rotate(-45deg);
+}
+
+.paginator__page:first-child .disabled::before,
+.paginator__page:first-child .disabled::after,
+.paginator__page:last-child .disabled::before,
+.paginator__page:last-child .disabled::after {
+  background-color: rgba(255, 255, 255, 0.2);
 }
