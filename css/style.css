@@ -1347,11 +1347,17 @@ label[for="btn-3"]:hover {
   cursor: pointer;
 }
 
+.select:hover::before {
+  border-top: 10px solid #333333;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
 .options {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 0;
 
   display: block;
   min-height: 37px;
@@ -1364,24 +1370,6 @@ label[for="btn-3"]:hover {
 .options label:hover {
   color: #323232;
   background: #ffffff;
-  cursor: pointer;
-}
-
-.options label:hover .select::before {
-  content: "";
-  position: absolute;
-  right: 16px;
-  top: 15px;
-  z-index: 10;
-
-  display: inline-block;
-  width: 0;
-  height: 0;
-
-  border-top: 10px solid #333333;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-
   cursor: pointer;
 }
 
@@ -1503,6 +1491,10 @@ label[for="btn-3"]:hover {
   box-sizing: border-box;
 }
 
+.radiobuttons label:hover::before {
+  border: 4px solid #ffffff;
+}
+
 .radiobuttons input:checked + label::after {
   content: "";
   position: absolute;
@@ -1514,6 +1506,10 @@ label[for="btn-3"]:hover {
 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+.radiobuttons input:checked + label:hover::after {
+  background-color: #ffffff;
 }
 
 .catalog-form .checkboxes {
@@ -1553,6 +1549,10 @@ label[for="btn-3"]:hover {
   box-sizing: border-box;
 }
 
+.checkboxes label:hover::before {
+  border: 2px solid #ffffff;
+}
+
 .checkboxes input:checked + label::before {
   width: 24px;
 
@@ -1560,6 +1560,11 @@ label[for="btn-3"]:hover {
   background-image: url("../img/checkbox-on.png");
   background-repeat: no-repeat;
   background-position: center;
+  opacity: 0.8;
+}
+
+.checkboxes input:checked + label:hover::before {
+  opacity: 1;
 }
 
 .catalog-form .btn {
@@ -1587,6 +1592,7 @@ label[for="btn-3"]:hover {
 }
 
 .catalog-form .btn:active {
+  background-color: #ededed;
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
