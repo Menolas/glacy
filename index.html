@@ -141,7 +141,7 @@
               </li>
             </ul>
           </section>
-        
+
           <section class="features">
             <h3 class="features__title">Магазин Глейси — это онлайн и офлайн магазин по
               продаже мороженого собственного производства на развес</h3>
@@ -184,8 +184,7 @@
           </section>
         </div>
       </main>
-
-      <div class="map">
+      <div class="map-wrap">
         <div class="address">
           <p>Адрес главного офиса<br>и офлайн магазина:</p>
           <address>ул. Большая Конюшенная 19/8, Санкт-Петербург</address>
@@ -194,6 +193,7 @@
           (с 10 до 20 ежедневно) </p>
           <a class="btn" href="#">Форма обратной связи</a>
         </div>
+        <div class="map" id="map-canvas"></div>
       </div>
 
       <footer class="page-footer">
@@ -233,4 +233,8 @@
       </div>
 
   </div>
+  <script src="js/script.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClNqLnW3BNUR3g4TjhOKBy4RVvbIbunUU&callback=initMap">
+  </script>
 </body>

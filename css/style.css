@@ -221,6 +221,10 @@ body {
   background-color: transparent;
 }
 
+.catalog-list__item a::after {
+  display: none;
+}
+
 .catalog-list__item:first-child a {
   position: relative;
 
@@ -967,9 +971,11 @@ label[for="btn-3"]:hover {
   border: none;
 }
 
-.map {
+.map-wrap {
   position: relative;
+}
 
+.map {
   height: 429px;
 
   background-color: #c6bfa9;
@@ -986,6 +992,7 @@ label[for="btn-3"]:hover {
   position: absolute;
   right: 20px;
   top: 62px;
+  z-index: 100;
 
   padding: 25px;
   padding-top: 28px;
