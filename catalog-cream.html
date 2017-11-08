@@ -50,7 +50,7 @@
                   </div>
                 </form>
               </li>
-              <li class="user-block__item  user-block__item--basket"><a href="#">Пусто</a></li>
+              <li class="user-block__item  user-block__item--basket"><a class="full" href="#">2 товара</a></li>
             </ul>
           </nav>
           <p>С 10 до 20, ежедневно<br><span class="contact-phone">8 812 450-25-25</span></p>
@@ -61,31 +61,46 @@
         <div class="container">
           <nav class="breadcrumbs">
             <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item"><a href="index.html">Главная »</a></li>
-              <li class="breadcrumbs__item"><a href="#">Каталог »</a></li>
+              <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
               <li class="breadcrumbs__item"><a class="active">Сливочное</a></li>
             </ul>
           </nav>
           <h1 class="main-title">Сливочное мороженое</h1>
-          <form class="catalog-form">
+          <form class="catalog-form" action="/search.php"  method="get" name="filter-form">
             <fieldset class="select-field">
               <legend>Сортировка</legend>
               <div class="fieldset__wrap">
                 <label for="select" class="select">
-                  <input type="radio" name="list" value="not_changed" id="bg" checked>
-                  <input type="radio" name="list" value="not_changed" id="select">
                   <label class="bg" for="bg"></label>
                   <div class="options">
                     <input type="radio" name="list" value="first_value" id="list[0]" checked>
                     <label for="list[0]">по популярности</label>
                   </div>
                 </label>
-              </div>  
+              </div>
             </fieldset>
             <fieldset class="range">
-              <legend>Цена: 100 руб. &ndash; 500 руб.</legend>
+              <legend>Цена:</legend>
               <div class="fieldset__wrap">
-                <input type="range" multiple min="100" step="50" max="500" data-values="100 500">
+
+                  <div class="price-controls">
+                    <input class="price-range" type="text" name="min-price" value="100">
+                    <label class="min-price">руб.</label>
+                    &ndash;
+                    <input class="price-range" type="text" name="max-price" value="500">
+                    <label class="max-price">руб.</label>
+                  </div>
+
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar-between"></div>
+                      <div class="bar"></div>
+                    </div>
+                    <div class="toggle toggle-min"></div>
+                    <div class="toggle toggle-max"></div>
+                  </div>
+
               </div>
             </fieldset>
             <fieldset class="radiobuttons">
