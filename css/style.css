@@ -1078,6 +1078,7 @@ label[for="btn-3"]:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 32px 32px;
+  opacity: 0.8;
 }
 
 .social__item--twitter a  {
