@@ -23,6 +23,27 @@
   line-height: 1.73;
 }
 
+.form textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.73;
+}
+.form textarea::-moz-placeholder { /* Firefox 19+ */
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.73;
+}
+.form textarea:-ms-input-placeholder { /* IE 10+ */
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.73;
+}
+.form textarea:-moz-placeholder { /* Firefox 18- */
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.73;
+}
+
 .form input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-size: 0;
 }
@@ -33,6 +54,19 @@
   font-size: 0;
 }
 .form input:focus:-moz-placeholder { /* Firefox 18- */
+  font-size: 0;
+}
+
+.form textarea:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 0;
+}
+.form textarea:focus::-moz-placeholder { /* Firefox 19+ */
+  font-size: 0;
+}
+.form textarea:focus:-ms-input-placeholder { /* IE 10+ */
+  font-size: 0;
+}
+.form textarea:focus:-moz-placeholder { /* Firefox 18- */
   font-size: 0;
 }
 
@@ -373,7 +407,8 @@ background-image: url("../img/icon-search-h.png");
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.form input {
+.form input,
+.form textarea {
   padding: 11px 15px;
 
   color: #323232;
@@ -384,11 +419,13 @@ background-image: url("../img/icon-search-h.png");
   box-sizing: border-box;
 }
 
-.form input:hover {
+.form input:hover,
+.form textarea {
   border: 2px solid rgba(50, 50, 50, 0.52);
 }
 
-.form input:focus {
+.form input:focus,
+.form textarea {
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
@@ -1199,6 +1236,59 @@ label[for="btn-3"]:hover {
 
 .feedback {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-right: -240px;
+  padding-top: 15px;
+  padding-left: 24px;
+  padding-right: 26px;
+  padding-bottom: 27px;
+
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
+.feedback h2 {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 1.66;
+}
+
+.feedback-form {
+  position: static;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 20px;
+  width: 431px;
+
+  box-shadow: none;
+}
+
+.feedback-form input {
+  margin-bottom: 20px;
+  width: 270px;
+}
+
+.feedback-form textarea {
+  margin-bottom: 24px;
+  width: 431px;
+  height: 158px;
+
+  box-sizing: border-box;
+}
+
+.feedback-form .btn {
+  margin-right: 0;
+  margin-left: auto;
+  width: 139px;
+
+  border: none;
 }
 
 .catalog-main {
